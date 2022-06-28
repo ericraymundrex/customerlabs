@@ -20,24 +20,24 @@ def destination_list(request):
 
     elif request.method=='POST':
         try:
-            request.headers['app-id']
-            request.headers['app-sectet']
+            account_id=request.headers['app-id']
+            app_secret_token=request.headers['app-sectet']
         except:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
-
+            return Response([{"message":"Add proper header"}],status=status.HTTP_400_BAD_REQUEST)
             
         try:
-            account=Account.objects.get(pk=request.headers['app-id'])
+            account=Account.objects.get(pk=account_id)
         except Account.DoesNotExist:
-            return Response(status=status.HTTP_404_NOT_FOUND)
-        
-        print("-------------")
-        if str(account.app_secret_token).replace("-","")==request.headers['app-sectet']:
-            request.data['account_id']=request.headers['app-id']
+            return Response([{"message":"Account Not found"}],status=status.HTTP_404_NOT_FOUND)
+        except:
+            return Response([{"message":"Enter proper secret key"}],status=status.HTTP_401_UNAUTHORIZED)
+            
+        if str(account.app_secret_token).replace("-","")==app_secret_token and str(account.account_id).replace("-","")==account_id:
+            request.data['account_id']=account_id
             serializers=DestinationSerializers(data=request.data)
             if serializers.is_valid():
                 serializers.save()
                 return Response(serializers.data,status=status.HTTP_201_CREATED)
             return Response(serializers.errors,status=status.HTTP_400_BAD_REQUEST)
         else:
-            return Response(status=status.HTTP_400_BAD_REQUEST)
+            return Response([{"message":"Enter proper secret key"}],status=status.HTTP_401_UNAUTHORIZED)
