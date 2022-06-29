@@ -19,6 +19,8 @@ Find ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&
 
 NOTE: ```Content-Type:application/json```
 
+In place of stubs, I used: ```http://httpbin.org/```
+
 |Purpose| End Point | Request Type | Body | Header |
 |--------|-----------|--------------|-------|--------|
 |Account|http://127.0.0.1:8000/account/| GET/POST | ```{"email_id": "","account_name": "","website": ""}```| NA|
