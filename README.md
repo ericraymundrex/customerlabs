@@ -33,7 +33,7 @@ customerlabs
 ├── account          [App]
 ├── customerlabs     [Project]
 ├── data_handler     [App]
-├── db.sqlite3       [Sample Database - have all data in POSTMAN]
+├── db.sqlite3       [Sample Database - all sample data in POSTMAN]
 ├── destination      [App]
 ├── manage.py
 └── requirements.txt
