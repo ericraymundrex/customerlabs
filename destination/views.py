@@ -1,10 +1,10 @@
 from .serializers import DestinationSerializers
 from .models import Destination
-from rest_framework import viewsets, status
+from rest_framework import  status
 from rest_framework.response import Response
 from rest_framework.decorators import api_view
 from account.models import Account
-
+from rest_framework import generics
 
 # class DestinationViewSet(viewsets.ModelViewSet):
 #     queryset=Destination.objects.all()
@@ -32,7 +32,7 @@ def destination_list(request):
         except:
             return Response([{"message":"Enter proper secret key"}],status=status.HTTP_401_UNAUTHORIZED)
             
-        if str(account.app_secret_token).replace("-","")==app_secret_token and str(account.account_id).replace("-","")==account_id:
+        if str(account.app_secret_token)==app_secret_token and str(account.account_id)==account_id:
             request.data['account_id']=account_id
             serializers=DestinationSerializers(data=request.data)
             if serializers.is_valid():
@@ -41,3 +41,9 @@ def destination_list(request):
             return Response(serializers.errors,status=status.HTTP_400_BAD_REQUEST)
         else:
             return Response([{"message":"Enter proper secret key"}],status=status.HTTP_401_UNAUTHORIZED)
+
+
+class DestinationList(generics.RetrieveDestroyAPIView):
+    queryset=Destination.objects.all()
+    serializer_class = DestinationSerializers
+    
