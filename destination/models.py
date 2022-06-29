@@ -8,4 +8,4 @@ class Destination(models.Model):
 
 
     def __str__(self):
-        return "{"+self.id+"destination-url:"+self.destination_url+",HTTP_methos_for_destination:"+self.HTTP_methos_for_destination+"}"
+        return self.destination_url

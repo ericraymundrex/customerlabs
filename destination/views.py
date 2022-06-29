@@ -46,4 +46,3 @@ def destination_list(request):
 class DestinationList(generics.RetrieveDestroyAPIView):
     queryset=Destination.objects.all()
     serializer_class = DestinationSerializers
-    
