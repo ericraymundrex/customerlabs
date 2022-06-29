@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "ea008c71-1226-44bd-8f52-39afe396e564",
+		"name": "Postman_test_cases",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Account",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/account/",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "javascript"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/account/e6228ef0-7623-44a1-a69d-7ba395ae5e7d",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"account",
+								"e6228ef0-7623-44a1-a69d-7ba395ae5e7d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/account/e6228ef0-7623-44a1-a69d-7ba395ae5e7d",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/destination/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"destination",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Destination",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/destination/",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/destination/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"destination",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/destination/2",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://127.0.0.1:8000/destination/2",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"destination",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "http://127.0.0.1:8000/destination/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "app-id",
+								"value": "e6228ef0-7623-44a1-a69d-7ba395ae5e7d",
+								"type": "default"
+							},
+							{
+								"key": "app-sectet",
+								"value": "8003e279-887b-4349-9b66-385c45a5cc80",
+								"type": "default"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n        \"destination_url\": \"httpbin.org/put\",\n        \"HTTP_methos_for_destination\": \"PUT\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/destination/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"destination",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Data_handler",
+			"item": [
+				{
+					"name": "http://127.0.0.1:8000/server/incoming_data/",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "cl-x-token",
+								"value": "8003e279887b43499b66385c45a5cc80",
+								"type": "default"
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "default"
+							},
+							{
+								"key": "app-sectet",
+								"value": "9c1add93855a4521854a62a47b96ecab",
+								"type": "default",
+								"disabled": true
+							},
+							{
+								"key": "app-id",
+								"value": "f9452bd54c164ba6af5d6366b2a348a3",
+								"type": "default",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n   \"q\":\"Hello\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://127.0.0.1:8000/server/incoming_data/",
+							"protocol": "http",
+							"host": [
+								"127",
+								"0",
+								"0",
+								"1"
+							],
+							"port": "8000",
+							"path": [
+								"server",
+								"incoming_data",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
