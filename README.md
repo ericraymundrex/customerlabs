@@ -15,6 +15,7 @@ docker run <Container_id>
 ```
 
 #### REST End Points:
+Find ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) collection here: [Click Here](https://github.com/ericraymundrex/customerlabs/blob/main/Postman_test_cases.postman_collection.json)
 |Purpose| End Point | Request Type | Body | Header |
 |--------|-----------|--------------|-------|--------|
 |Account|http://127.0.0.1:8000/account/| GET/POST | ```{"email_id": "","account_name": "","website": ""}```| NA|
@@ -29,83 +30,11 @@ File Structure
 ```
 customerlabs
 ├── Dockerfile
-├── account
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-39.pyc
-│   │   ├── admin.cpython-39.pyc
-│   │   ├── apps.cpython-39.pyc
-│   │   ├── models.cpython-39.pyc
-│   │   ├── serializers.cpython-39.pyc
-│   │   ├── urls.cpython-39.pyc
-│   │   └── views.cpython-39.pyc
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations
-│   │   ├── 0001_initial.py
-│   │   ├── __init__.py
-│   │   └── __pycache__
-│   │       ├── 0001_initial.cpython-39.pyc
-│   │       └── __init__.cpython-39.pyc
-│   ├── models.py
-│   ├── serializers.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-├── customerlabs
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-39.pyc
-│   │   ├── settings.cpython-39.pyc
-│   │   ├── urls.cpython-39.pyc
-│   │   └── wsgi.cpython-39.pyc
-│   ├── asgi.py
-│   ├── settings.py
-│   ├── urls.py
-│   └── wsgi.py
-├── data_handler
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-39.pyc
-│   │   ├── admin.cpython-39.pyc
-│   │   ├── apps.cpython-39.pyc
-│   │   ├── models.cpython-39.pyc
-│   │   ├── urls.cpython-39.pyc
-│   │   └── views.cpython-39.pyc
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations
-│   │   ├── __init__.py
-│   │   └── __pycache__
-│   │       └── __init__.cpython-39.pyc
-│   ├── models.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
-├── db.sqlite3
-├── destination
-│   ├── __init__.py
-│   ├── __pycache__
-│   │   ├── __init__.cpython-39.pyc
-│   │   ├── admin.cpython-39.pyc
-│   │   ├── apps.cpython-39.pyc
-│   │   ├── models.cpython-39.pyc
-│   │   ├── serializers.cpython-39.pyc
-│   │   ├── urls.cpython-39.pyc
-│   │   └── views.cpython-39.pyc
-│   ├── admin.py
-│   ├── apps.py
-│   ├── migrations
-│   │   ├── 0001_initial.py
-│   │   ├── __init__.py
-│   │   └── __pycache__
-│   │       ├── 0001_initial.cpython-39.pyc
-│   │       └── __init__.cpython-39.pyc
-│   ├── models.py
-│   ├── serializers.py
-│   ├── tests.py
-│   ├── urls.py
-│   └── views.py
+├── account          [App]
+├── customerlabs     [Project]
+├── data_handler     [App]
+├── db.sqlite3       [Sample Database - have all data in POSTMAN]
+├── destination      [App]
 ├── manage.py
 └── requirements.txt
 ```
