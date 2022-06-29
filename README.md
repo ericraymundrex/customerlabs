@@ -16,6 +16,9 @@ docker run <Container_id>
 
 #### REST End Points:
 Find ![Postman](https://img.shields.io/badge/Postman-FF6C37?style=for-the-badge&logo=postman&logoColor=white) collection here: [Click Here](https://github.com/ericraymundrex/customerlabs/blob/main/Postman_test_cases.postman_collection.json)
+
+NOTE: ```Content-Type:application/json```
+
 |Purpose| End Point | Request Type | Body | Header |
 |--------|-----------|--------------|-------|--------|
 |Account|http://127.0.0.1:8000/account/| GET/POST | ```{"email_id": "","account_name": "","website": ""}```| NA|
